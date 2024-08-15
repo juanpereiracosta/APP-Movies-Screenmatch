@@ -1,12 +1,17 @@
 package models;
 
 public class Title {
+
     String name;
     int yearOfRelease;
     private boolean includedInThePlan;
     private double sumReviews;
     private int totalReviews;
     private int durationInMinutes;
+
+    public String getName() {
+        return name;
+    }
 
     public void setYearOfRelease(int yearOfRelease) {
         this.yearOfRelease = yearOfRelease;

@@ -1,7 +1,10 @@
 import calculations.RecomendationFilter;
 import calculations.TimeCalculator;
 import models.Episode;
+import models.Movie;
 import models.Series;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,15 +17,35 @@ public class Main {
         movie1.review(8);
         movie1.review(5);
         movie1.review(10);
+        System.out.println("Total number of reviews: " + movie1.getTotalReviews());
+        System.out.println(movie1.showMedia());
 
         models.Movie movie2 = new models.Movie();
         movie2.setName("Die Hard");
         movie2.setYearOfRelease(1983);
         movie2.setDurationInMinutes(164);
         movie2.showTechnicalSheet();
+        movie1.review(4);
+        movie1.review(10);
+        movie1.review(7);
+        System.out.println("Total number of reviews: " + movie2.getTotalReviews());
+        System.out.println(movie2.showMedia());
 
-        System.out.println("Total number of reviews: " + movie1.getTotalReviews());
-        System.out.println(movie1.showMedia());
+        Movie movie3 = new Movie();
+        movie3.setName("Trainspotting");
+        movie3.setYearOfRelease(1996);
+        movie3.setDurationInMinutes(172);
+        movie3.showTechnicalSheet();
+        movie3.review(10);
+        movie3.review(9);
+        movie3.review(8);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(movie1);
+        movieList.add(movie2);
+        movieList.add(movie3);
+        System.out.println("Quantidade de filmes na lista: " + movieList.size());
+        System.out.println(movieList.get(0).getName());
 
         Series series1 = new Series();
         series1.setName("Sopranos");
