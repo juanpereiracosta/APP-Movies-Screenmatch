@@ -1,7 +1,6 @@
-import org.w3c.dom.ls.LSOutput;
+package models;
 
-public class Movie {
-
+public class Title {
     String name;
     int yearOfRelease;
     private boolean includedInThePlan;
@@ -37,7 +36,7 @@ public class Movie {
         System.out.println("Name: " + name);
         System.out.println("Year Of Release: " + yearOfRelease);
         System.out.println("Duration In Minutes: " + durationInMinutes);
-        System.out.println("Name: " + name);
+        System.out.println("**************************");
     }
 
     public void review(double grade) {
