@@ -5,6 +5,8 @@ import models.Series;
 import models.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainLists {
 
@@ -37,6 +39,23 @@ public class MainLists {
                 System.out.println("Classification: " + movie.getClassification());
             }
         }
+
+        ArrayList<String> artistSearch = new ArrayList<>();
+        artistSearch.add("Denzel Washington");
+        artistSearch.add("Viola Davis");
+        artistSearch.add("James Wilson");
+        artistSearch.add("Anna Frank");
+        artistSearch.add("Kate Smith");
+        artistSearch.add("Sofia Coppola");
+        System.out.println(artistSearch);
+
+        Collections.sort(artistSearch);
+        System.out.println("Ordenada:");
+        System.out.println(artistSearch);
+
+        titlesList.sort(Comparator.comparing(Title::getYearOfRelease));
+        System.out.println(titlesList);
+
     }
 }
 
